@@ -25,6 +25,10 @@
                 {{ t.text }}
                 <i @click="deletTask(i)" class="bi bi-trash"></i>
             </li>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" v-model.trim="newTask.text">
+                <button @click="addTask" class="btn btn-success" type="button" id="button-addon2">Aggiungi</button>
+            </div>
             <!-- <button type="button" class="btn btn-success mt-3">Aggiungi</button> -->
           </ul>
     </div>
