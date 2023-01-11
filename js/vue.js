@@ -20,7 +20,7 @@ const app = Vue.createApp({
     },
     computed: {    
         newTask() {
-           return newTask = {text: '', done: true}
+           return newTask = {text: '', done: false}
         }
 
     },
