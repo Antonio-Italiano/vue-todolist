@@ -18,8 +18,15 @@
     <script defer src="js/vue.js"></script>
 </head>
 <body>
-    <div id="root">
-        
+    <div id="root" class="container w-75 mx-auto">
+        <h2 class="text-center mt-3">Lista di cose da fare</h2>
+        <ul class="list-group mt-5 w-50 mx-auto d-flex justify-content-between">
+            <li v-for="(t, i) in tasks" class="list-group-item d-flex justify-content-between" :class="{'text-done': t.done === true}">
+                {{ t.text }}
+                <i @click="deletTask(i)" class="bi bi-trash"></i>
+            </li>
+            <!-- <button type="button" class="btn btn-success mt-3">Aggiungi</button> -->
+          </ul>
     </div>
 </body>
 </html>
