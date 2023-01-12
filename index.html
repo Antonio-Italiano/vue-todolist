@@ -21,8 +21,8 @@
     <div id="root" class="container w-75 mx-auto">
         <h2 class="text-center mt-3">Lista di cose da fare</h2>
         <ul class="list-group mt-5 w-50 mx-auto d-flex justify-content-between">
-            <li v-for="(t, i) in tasks" class="list-group-item d-flex justify-content-between" :class="{'text-done': t.done === true}">
-                {{ t.text }}
+            <li v-for="(t, i) in tasks" class="list-group-item d-flex justify-content-between" :class="{'text-done': t.done === true}" @click="changeDone(i)">
+                <div>{{ t.text }}</div>
                 <i @click="deletTask(i)" class="bi bi-trash"></i>
             </li>
             <div class="input-group mb-3">
